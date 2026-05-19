@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Invirto_scr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/parse/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/parse/common_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/parse/scrapper.py" afterDir="false" />
+    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше">
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/xl_worker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/parse/common_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/parse/common_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/parse/scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/parse/scrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +39,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Debug",
     "Python.scrapper.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/user/PycharmProjects/Invirto_scr/app/parse"
+    "last_opened_file_path": "/home/user/PycharmProjects/Invirto_scr"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/utils" />
       <recent name="$PROJECT_DIR$/app/parse" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="TaskManager">
@@ -64,20 +63,28 @@
       <option name="presentableId" value="Default" />
       <updated>1779195329202</updated>
     </task>
+    <task id="LOCAL-00001" summary="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше">
+      <option name="closed" value="true" />
+      <created>1779199473684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779199473684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
