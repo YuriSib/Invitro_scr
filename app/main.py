@@ -21,7 +21,7 @@ def main():
     # В этом цикле будут использоваться рандомные ожидания для того,
     # чтобы сервис Invitro не заблочил наш парсер по IP-адресу.
     for category_title, category_id in categories.items():
-        time_sleep = randint(5, 12)
+        time_sleep = randint(4, 9)
         logger.debug(f"Жду {time_sleep} секунд")
         time.sleep(time_sleep)
         logger.info(f"Начинаю обрабатывать категорию {category_title}")
@@ -32,8 +32,13 @@ def main():
         services = scrapper.get_services(category_id)
 
         if type(services) is str:
-            logger.error(f"Не удалось получить данные по категории.")
-            return None
+            logger.error(f"Не удалось получить данные по категории. причина - {services}")
+
+            logger.info(f'Жду {time_sleep} секунд и пробую еще раз.')
+            services = scrapper.get_services(category_id)
+            if type(services) is str:
+                logger.critical(f"Опять удалось получить данные по категории. Причина - {services}")
+                continue
 
         logger.debug(f'Вставляю полученные данные в таблицу.')
         result = table.add_services(services)

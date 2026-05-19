@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше">
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/xl_worker.py" afterDir="false" />
+    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="Доделал оркестратор и полностью всю структуру программы. Также приложил файл с зависимостями.">
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parse/common_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/parse/common_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parse/scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/parse/scrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "YuriSib"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/YuriSib/Invitro_scr.git",
+    "accountId": "ad3f8f6d-272f-4638-88bf-bd771a3ffea7"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
@@ -39,7 +47,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
+    "Python.project_structure.executor": "Run",
     "Python.scrapper.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -71,22 +80,20 @@
       <option name="project" value="LOCAL" />
       <updated>1779199473684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Доделал оркестратор и полностью всю структуру программы. Также приложил файл с зависимостями.">
+      <option name="closed" value="true" />
+      <created>1779209132613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779209132613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Доделал оркестратор и полностью всю структуру программы. Также приложил файл с зависимостями." />
+    <option name="LAST_COMMIT_MESSAGE" value="Доделал оркестратор и полностью всю структуру программы. Также приложил файл с зависимостями." />
   </component>
 </project>
