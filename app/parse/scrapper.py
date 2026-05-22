@@ -28,10 +28,27 @@ class InvitroScrapper:
             return 'Не удается преобразовать полученные данные в словарь.'
         return "OK"
 
-    def get_categories(self) -> dict | str:
+    def get_categories_tests(self) -> dict | str:
         """Сделает запрос к API Invitro и достанет список всех категорий анализов."""
-        response = self._fetch_data('https://www.invitro.ru/golk/tests/api/v1/complexes/categories')
+        response = self._fetch_data('https://www.invitro.ru/golk/tests/api/v1/tests/categories')
         result = self._validation(response)
+        if result != 'OK':
+            return result
+
+        categories = {}
+        for category in response.json():
+            for subcategory in category['subcategories']:
+                categories[subcategory['title']] = subcategory['id']
+
+        return categories
+
+    def get_categories_complexes(self) -> dict | str:
+        """Сделает запрос к API Invitro и достанет список всех категорий анализов."""
+        try:
+            response = self._fetch_data('https://www.invitro.ru/golk/tests/api/v1/complexes/categories')
+            result = self._validation(response)
+        except Exception as e:
+            return str(e)
         if result != 'OK':
             return result
 
@@ -41,9 +58,25 @@ class InvitroScrapper:
 
         return categories
 
-    def get_services(self, category_id: str) -> list[dict] | str:
+    def get_checkups(self):
+        """Сделает запрос к API Invitro и достанет список всех категорий анализов."""
+        try:
+            response = self._fetch_data('https://www.invitro.ru/golk/tests/api/v1/checkups/')
+            result = self._validation(response)
+        except Exception as e:
+            return str(e)
+        if result != 'OK':
+            return result
+
+        categories = {}
+        for category in response.json():
+            categories[category['title']] = category['id']
+
+        return categories
+
+    def get_services(self, category_id: str, category_type="tests") -> list[dict] | str:
         """сделает запрос к API Invitro и достанет список всех услуг по данному ID категории"""
-        response = self._fetch_data(f'https://www.invitro.ru/golk/tests/api/v1/complexes/categories/{category_id}')
+        response = self._fetch_data(f'https://www.invitro.ru/golk/tests/api/v1/{category_type}/categories/{category_id}')
         result = self._validation(response)
         if result != 'OK':
             return result
@@ -64,4 +97,5 @@ class InvitroScrapper:
 
 if __name__ == '__main__':
     scraper = InvitroScrapper()
-    scraper.get_services("749c4082-aba7-40ca-8fde-8481f8212c5a")
+    categories = scraper.get_checkups()
+    print(len(categories))
