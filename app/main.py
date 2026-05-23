@@ -7,7 +7,17 @@ from app.parse.scrapper import InvitroScrapper
 from config import TABLE_PATH
 
 
-def worker(categories: dict, table: ExcelTable, scrapper: InvitroScrapper, category_type="tests"):
+def add_to_table(services: list[dict], table: ExcelTable):
+    logger.debug(f'Вставляю полученные данные в таблицу.')
+    result = table.add_services(services)
+    if result != "OK":
+        logger.error(f"Возникла ошибка при попытке вставить данные в таблицу. {result}")
+        return None
+    logger.debug('Данные вставлены успешно.')
+    table.save()
+
+
+def worker(categories: dict, table: ExcelTable, scrapper: InvitroScrapper, category_type="tests") -> int:
     # В этом цикле будут использоваться рандомные ожидания для того,
     # чтобы сервис Invitro не заблочил наш парсер по IP-адресу.
     crv_cnt = 0
@@ -33,13 +43,7 @@ def worker(categories: dict, table: ExcelTable, scrapper: InvitroScrapper, categ
 
         crv_cnt += len(services)
 
-        logger.debug(f'Вставляю полученные данные в таблицу.')
-        result = table.add_services(services)
-        if result != "OK":
-            logger.error(f"Возникла ошибка при попытке вставить данные в таблицу. {result}")
-            return None
-        logger.debug('Данные вставлены успешно.')
-        table.save()
+        add_to_table(services, table)
         logger.info(f"Найдено {crv_cnt} услуг")
     return crv_cnt
 
@@ -49,9 +53,10 @@ def main():
     scrapper = InvitroScrapper()
 
     logger.debug("Собираю данные по категориям Invitro.")
+    checkups_services = scrapper.get_checkups()
     complexes_categories = scrapper.get_categories_complexes()
     # tests_categories = scrapper.get_categories_tests()
-    for i in [complexes_categories]:
+    for i in [checkups_services, complexes_categories]:
         if type(i) is str:
             logger.error(f"При сборе категории Invitro возникла ошибка - {i}. Попробуйте еще раз.")
             return None
@@ -59,8 +64,10 @@ def main():
 
     # crv_cnt_1 = worker(tests_categories, table, scrapper)
     crv_cnt_2 = worker(complexes_categories, table, scrapper, "complexes")
+    crv_cnt_3 = len(checkups_services)
+    add_to_table(checkups_services, table)
 
-    logger.warning(f"Данные по услугам успешно получены. Всего получено {crv_cnt_1+crv_cnt_2} позиций")
+    logger.warning(f"Данные по услугам успешно получены. Всего получено {crv_cnt_2+crv_cnt_3} позиций")
 
 
 if __name__ == "__main__":

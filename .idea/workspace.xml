@@ -47,9 +47,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.project_structure.executor": "Run",
-    "Python.scrapper.executor": "Run",
+    "Python.scrapper.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -96,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779210601381</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="чуть уменьшил время итерации в основном цикле оркестратора">
+      <option name="closed" value="true" />
+      <created>1779455800132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779455800132</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,59 +122,69 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="20" />
+          <line>103</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/main.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="21" />
+          <line>54</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/main.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="22" />
+          <line>56</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/parse/scrapper.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

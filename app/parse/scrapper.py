@@ -58,7 +58,7 @@ class InvitroScrapper:
 
         return categories
 
-    def get_checkups(self):
+    def get_checkups(self) -> list[dict] | str:
         """Сделает запрос к API Invitro и достанет список всех категорий анализов."""
         try:
             response = self._fetch_data('https://www.invitro.ru/golk/tests/api/v1/checkups/')
@@ -68,11 +68,14 @@ class InvitroScrapper:
         if result != 'OK':
             return result
 
-        categories = {}
-        for category in response.json():
-            categories[category['title']] = category['id']
+        services_clear_data = []
+        for service in response.json()['data']:
+            title = service['title']
+            price = service['price']
 
-        return categories
+            services_clear_data.append({"title": title, "price": price})
+
+        return services_clear_data
 
     def get_services(self, category_id: str, category_type="tests") -> list[dict] | str:
         """сделает запрос к API Invitro и достанет список всех услуг по данному ID категории"""
