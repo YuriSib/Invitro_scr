@@ -22,7 +22,7 @@ def worker(categories: dict, table: ExcelTable, scrapper: InvitroScrapper, categ
     # чтобы сервис Invitro не заблочил наш парсер по IP-адресу.
     crv_cnt = 0
     for category_title, category_id in categories.items():
-        time_sleep = randint(1, 3)
+        time_sleep = randint(0, 2)
         logger.debug(f"Жду {time_sleep} секунды")
         time.sleep(time_sleep)
         logger.info(f"Начинаю обрабатывать категорию {category_title}")
@@ -55,19 +55,19 @@ def main():
     logger.debug("Собираю данные по категориям Invitro.")
     checkups_services = scrapper.get_checkups()
     complexes_categories = scrapper.get_categories_complexes()
-    # tests_categories = scrapper.get_categories_tests()
-    for i in [checkups_services, complexes_categories]:
+    tests_categories = scrapper.get_categories_tests()
+    for i in [checkups_services, complexes_categories, tests_categories]:
         if type(i) is str:
             logger.error(f"При сборе категории Invitro возникла ошибка - {i}. Попробуйте еще раз.")
             return None
     logger.info("Успешно получил данные по категориям.")
 
-    # crv_cnt_1 = worker(tests_categories, table, scrapper)
+    crv_cnt_1 = worker(tests_categories, table, scrapper)
     crv_cnt_2 = worker(complexes_categories, table, scrapper, "complexes")
     crv_cnt_3 = len(checkups_services)
     add_to_table(checkups_services, table)
 
-    logger.warning(f"Данные по услугам успешно получены. Всего получено {crv_cnt_2+crv_cnt_3} позиций")
+    logger.warning(f"Данные по услугам успешно получены. Всего получено {crv_cnt_1+crv_cnt_2+crv_cnt_3} позиций")
 
 
 if __name__ == "__main__":
