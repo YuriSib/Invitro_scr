@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="чуть уменьшил время итерации в основном цикле оркестратора">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parse/scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/parse/scrapper.py" afterDir="false" />
-    </list>
+    <list default="true" id="3c9163ef-108c-45b0-8b1d-970613b58cdd" name="Changes" comment="Добавил методы сбора чекапов и анализов. Также внес изменения в оркестратор." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.project_structure.executor": "Run",
     "Python.scrapper.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -104,14 +100,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779455800132</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="чуть уменьшил время итерации в основном цикле оркестратора">
+      <option name="closed" value="true" />
+      <created>1779520060551</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779520060551</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавил методы сбора чекапов и анализов. Также внес изменения в оркестратор.">
+      <option name="closed" value="true" />
+      <created>1779520326273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779520326273</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="сделал тестовый get запрос к api in vitro данные отдаются полном объеме буду масштабировать свой парсер дальше" />
     <MESSAGE value="Доделал оркестратор и полностью всю структуру программы. Также приложил файл с зависимостями." />
     <MESSAGE value="чуть уменьшил время итерации в основном цикле оркестратора" />
-    <option name="LAST_COMMIT_MESSAGE" value="чуть уменьшил время итерации в основном цикле оркестратора" />
+    <MESSAGE value="Добавил методы сбора чекапов и анализов. Также внес изменения в оркестратор." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил методы сбора чекапов и анализов. Также внес изменения в оркестратор." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

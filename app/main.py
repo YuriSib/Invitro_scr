@@ -21,7 +21,7 @@ def worker(categories: dict, table: ExcelTable, scrapper: InvitroScrapper, categ
     # В этом цикле будут использоваться рандомные ожидания для того,
     # чтобы сервис Invitro не заблочил наш парсер по IP-адресу.
     crv_cnt = 0
-    for category_title, category_id in categories.items():
+    for category_id, category_title in categories.items():
         time_sleep = randint(0, 2)
         logger.debug(f"Жду {time_sleep} секунды")
         time.sleep(time_sleep)
